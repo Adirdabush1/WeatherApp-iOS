@@ -47,3 +47,4 @@ iOS Weather App (UIKit) using OpenWeatherMap API with a clean MVVM-style separat
 README זה נועד להציג את הבחירות הטכניות המרכזיות ואת האופן שבו האפליקציה מתנהגת במצב לא מקוון.
 ***
 - `Views/`: UIKit views/controllers.
+test

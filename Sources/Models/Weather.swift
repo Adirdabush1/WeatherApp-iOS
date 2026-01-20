@@ -62,6 +62,9 @@ struct Weather: Codable {
             self.humidity = main.humidity
             self.windSpeed = wind.speed
             self.icon = conditions.first?.icon ?? ""
+            #if DEBUG
+            print("[Weather] decoded from API - temp:\(self.temp) icon:\(self.icon)")
+            #endif
             return
         }
 
@@ -85,3 +88,11 @@ struct Weather: Codable {
         try container.encode(icon, forKey: .icon)
     }
 }
+
+#if DEBUG
+extension Weather: CustomDebugStringConvertible {
+    var debugDescription: String {
+        return "Weather(temp:\(temp), min:\(tempMin), max:\(tempMax), humidity:\(humidity), wind:\(windSpeed), icon:\(icon))"
+    }
+}
+#endif
